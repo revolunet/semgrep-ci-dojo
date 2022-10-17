@@ -44,5 +44,7 @@ app.post('/login', function (req, res) {
 
 });
 
+console.log('ioooo');
+
 app.listen(3000);
  
