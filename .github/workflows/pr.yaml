@@ -1,9 +1,7 @@
 ---
 name: Semgrep Differential Scan
 on:
-  pull_request:
-    branches:
-      - "*"
+  pull_request 
 
 jobs:
 
@@ -19,5 +17,6 @@ jobs:
 
       - name: scan source code
         uses: docker://returntocorp/semgrep
-        run: semgrep scan --error --metrics=off --baseline-commit ${{ github.event.pull_request.base.sha }} --config="p/default"
-        working-directory: src
+        with:
+          args: semgrep scan --error --metrics=off --baseline-commit ${{ github.event.pull_request.base.sha }} --config="p/default"
+       # working-directory: src
