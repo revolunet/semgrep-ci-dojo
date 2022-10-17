@@ -21,10 +21,10 @@ app.post('/login', function (req, res) {
     console.log('test');
 
     // Unsafe Query
-//    var query = "SELECT name FROM user where username = '" + username + "' and password = '" + password + "'";
+    var query = "SELECT name FROM user where username = '" + username + "' and password = '" + password + "'";
     
     // Query wihtout where clause (just to pass semgrep scan)
-    var query = "SELECT name FROM user where username";
+    //var query = "SELECT name FROM user where username";
 
     console.log("username: " + username);
     console.log("password: " + password);
