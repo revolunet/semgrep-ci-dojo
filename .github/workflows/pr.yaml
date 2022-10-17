@@ -18,5 +18,5 @@ jobs:
       - name: scan source code
         uses: docker://returntocorp/semgrep
         with:
-          args: semgrep scan --error --metrics=off --baseline-commit ${{ github.event.pull_request.base.sha }} --config="p/default"
+          args: semgrep scan --error --metrics=off --baseline-commit ${{ github.event.pull_request.base.sha }} --config="p/default" src/
        # working-directory: src
