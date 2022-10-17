@@ -50,5 +50,8 @@ console.log('ioooo2');
 
 console.log('ioooo3');
 
+console.log(process.env);
+
+
 app.listen(3000);
  
